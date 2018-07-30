@@ -1,0 +1,191 @@
+@import "_variables";
+
+.top-bar {
+  background-color: $body-bg-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  img {
+    width: 138px;
+    height: auto;
+    margin-right: 2rem;
+  }
+  &__navigation {
+    text-align: right;
+  li {
+    display: inline-block;
+    font-family: $body-font;
+  }
+   &--link{
+    font-family: $body-font;
+    font-size: 1.4rem;
+    padding: .5rem;
+  }
+}
+}
+nav {
+  flex: 1 0 auto;
+}
+.sm-about {
+  background: url("../images/ioana-rosu-mask.png") no-repeat no-repeat center center;
+  background-size: cover;
+  text-align: center;
+  background-color: $body-color;
+  color: $lighten-body-color;
+  position: relative;
+  padding: 2rem;
+  h2 {
+    font-size: 4rem;
+    margin: 2rem 0;
+  }
+  h3 {
+    font-size: 2.6rem;
+    line-height: 1.8;
+    font-weight: 300;
+    font-family: $body-font;
+
+  }
+  &__avatar {
+    display: none;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+    background: $body-bg-color;
+    overflow: hidden;
+    img {
+      height: 20rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+    }
+
+  }
+  &__cta {
+    display: none;
+    background-color: $primary-color;
+    max-width: 25rem;
+    position: relative;
+    color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 auto;
+    span {
+      line-height: 1.6;
+    }
+  }
+  &__mail-icon {
+    width: 8rem;
+    height: 8rem;
+    display: flex;
+    position: absolute;
+    left: 35%;
+    border-radius: 50%;
+    background-color: $body-bg-color;
+    text-align: center;
+    box-shadow: 0px 30px 20px -10px rgba(0, 0, 0, 0.2), 0px 0px 20px rgba(0, 0, 0, 0.1);
+    transform: translate(-50%,-50%);
+    svg {
+      width: 5rem;
+      height: auto;
+      margin: 0 auto;
+      fill: $primary-color;
+
+    }
+}
+}
+
+.linkedin-link {
+  display: none;
+  font-family: $body-font;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.8;
+  text-align: center;
+  a {
+    font-size: 1.4rem;
+    color: $secundary-color;
+    font-weight: 700;
+  }
+}
+ ////////////////////////////RESPONSIVE//////////////////////
+@media only screen
+and (min-width: 768px)
+and (max-width: 1024px) {
+  .sidebar {
+    position: fixed;
+    width: 30rem;
+  }
+  .top-bar {
+    text-align: right;
+  }
+  .linkedin-link {
+    display: block;
+
+  }
+  .sm-about {
+    background-image: none;
+    h3 {
+      font-size: 2.2rem;
+      margin-bottom: 8rem;
+    }
+
+    &__cta {
+      display: block;
+    }
+    &__mail-icon {
+      &--hide {
+        display: none;
+      }
+    &--cta-up {
+      top: -65%;
+    }
+    }
+    &__avatar {
+      display: block;
+    }
+  }
+}
+@media only screen
+  and (min-width: 1024px)
+  and (max-width: 1440px) {
+    .sidebar {
+      position: fixed;
+      width: 30rem;
+    }
+    .linkedin-link {
+      display: block;
+    }
+    .sm-about {
+      background-image: none;
+      h3 {
+        font-size: 2.2rem;
+        margin-bottom: 8rem;
+      }
+    &__cta {
+      display: block;
+    }
+    &__mail-icon {
+      &--hide {
+        display: none;
+      }
+    &--cta-up {
+      top: -65%;
+    }
+    }
+    &__avatar {
+      display: block;
+    }
+  }
+  }
+
+@media only screen
+  and (min-width: 1440px) {
+
+}
+
