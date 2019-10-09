@@ -1,82 +1,56 @@
 @import "_variables";
-
-.top-bar {
-  background-color: $body-bg-color;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  img {
-    width: 138px;
-    height: auto;
-    margin-right: 2rem;
-  }
-  &__navigation {
-    text-align: right;
-  li {
-    display: inline-block;
-    font-family: $body-font;
-  }
-   &--link{
-    font-family: $body-font;
-    font-size: 1.4rem;
-    padding: .5rem;
-  }
-}
-}
-nav {
-  flex: 1 0 auto;
-}
 .sm-about {
-  background: url("../images/ioana-rosu-mask.png") no-repeat no-repeat center center;
-  background-size: cover;
-  text-align: center;
   background-color: $body-color;
   color: $lighten-body-color;
   position: relative;
-  padding: 2rem;
+  padding: 3rem;
   h2 {
-    font-size: 4rem;
-    margin: 2rem 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    text-transform: lowercase;
+    text-align: center;
+    color: $primary-color;
+    font-size: 36px;
+    letter-spacing: 0;
+    margin-bottom: .6rem;
   }
   h3 {
-    font-size: 2.6rem;
-    line-height: 1.8;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
     font-weight: 300;
-    font-family: $body-font;
-
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    font-size: 1.8rem;
+    margin: 0;
+    line-height: 1.5;
   }
-  &__avatar {
-    display: none;
-    width: 20rem;
-    height: 20rem;
-    border-radius: 50%;
-    position: relative;
-    margin: 0 auto;
-    background: $body-bg-color;
-    overflow: hidden;
-    img {
-      height: 20rem;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-
-    }
-
+  p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1.8rem;
+    letter-spacing: 0.05px;
+    line-height: 1.5;
+    color: $body-bg-color;
+    margin: 2.4rem 0;
   }
   &__cta {
     display: none;
     background-color: $primary-color;
-    max-width: 25rem;
+    max-width: 30rem;
     position: relative;
     color: white;
-    padding: 2rem;
+    padding: 2.5rem 0;
     border-radius: 8px;
     text-decoration: none;
     text-align: center;
     margin: 0 auto;
+    transition: 0.5s ease;
     span {
       line-height: 1.6;
+    }
+    &:hover {
+      background-color: lighten($primary-color, 5%);
+
     }
   }
   &__mail-icon {
@@ -84,12 +58,14 @@ nav {
     height: 8rem;
     display: flex;
     position: absolute;
-    left: 35%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transform: translateY(-1rem);
     border-radius: 50%;
     background-color: $body-bg-color;
     text-align: center;
     box-shadow: 0px 30px 20px -10px rgba(0, 0, 0, 0.2), 0px 0px 20px rgba(0, 0, 0, 0.1);
-    transform: translate(-50%,-50%);
     svg {
       width: 5rem;
       height: auto;
@@ -99,55 +75,70 @@ nav {
     }
 }
 }
-
-.linkedin-link {
-  display: none;
-  font-family: $body-font;
-  font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 1.8;
-  text-align: center;
-  a {
-    font-size: 1.4rem;
-    color: $secundary-color;
-    font-weight: 700;
-  }
+.contact-fixed {
+  .contact-section {
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+    grid-row-gap: 3.5rem;
+    margin-top: 5rem;
+    &__box {
+      color: $body-bg-color;
+      font-size: 1.4rem;
+      font-weight: 300;
+      text-transform: lowercase;
+      padding: .4rem;
+      span {
+        display: block;
+        text-transform: uppercase;
+        margin-top: .8rem;
+        font-weight: 600;
+        font-size: 1.6rem;
+      }
+    }
 }
  ////////////////////////////RESPONSIVE//////////////////////
+}
 @media only screen
 and (min-width: 768px)
 and (max-width: 1024px) {
   .sidebar {
     position: fixed;
-    width: 30rem;
+    width: 35rem;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  .contact-fixed {
+    .contact-section {
+      display: grid;
+    }
   }
   .top-bar {
     text-align: right;
   }
-  .linkedin-link {
-    display: block;
 
-  }
   .sm-about {
-    background-image: none;
-    h3 {
-      font-size: 2.2rem;
-      margin-bottom: 8rem;
+    height: 100%;
+    padding-top: 5rem;
+    p {
+      margin-top: 4.2rem;
     }
-
+    h2 {
+      font-size: 3.5rem;
+      margin-top: 2rem;
+    }
     &__cta {
       display: block;
+      margin-top: 12rem;
     }
     &__mail-icon {
       &--hide {
         display: none;
       }
     &--cta-up {
-      top: -65%;
+      transform:translateY(-12rem);
     }
-    }
-    &__avatar {
-      display: block;
     }
   }
 }
@@ -156,26 +147,36 @@ and (max-width: 1024px) {
   and (max-width: 1440px) {
     .sidebar {
       position: fixed;
-      width: 30rem;
+      width: 40rem;
+      height: 100%;
+      top: 0;
+      left: 0;
     }
-    .linkedin-link {
-      display: block;
-    }
+    .contact-fixed {
+  .contact-section {
+    display: grid;
+  }
+}
     .sm-about {
-      background-image: none;
-      h3 {
-        font-size: 2.2rem;
-        margin-bottom: 8rem;
+      height: 100%;
+      padding-top: 5rem;
+      h2 {
+        font-size: 3.5rem;
+        margin-top: 2rem;
+      }
+      p {
+        margin-top: 4.2rem;
       }
     &__cta {
       display: block;
+      margin-top: 10rem;
     }
     &__mail-icon {
       &--hide {
         display: none;
       }
     &--cta-up {
-      top: -65%;
+      transform:translateY(-12rem);
     }
     }
     &__avatar {
@@ -186,6 +187,45 @@ and (max-width: 1024px) {
 
 @media only screen
   and (min-width: 1440px) {
+    .sidebar {
+      position: fixed;
+      width: 40rem;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+    .contact-fixed {
+      .contact-section {
+        display: grid;
+      }
+    }
+    .sm-about {
+      height: 100%;
+      padding-top: 5rem;
+      h2 {
+        font-size: 3.5rem;
+        margin-top: 2rem;
+      }
+      p {
+        margin-top: 4.2rem;
+      }
+
+    &__cta {
+      display: block;
+      margin-top: 10rem;
+    }
+    &__mail-icon {
+      &--hide {
+        display: none;
+      }
+    &--cta-up {
+      transform:translateY(-12rem);
+    }
+    }
+    &__avatar {
+      display: block;
+    }
+  }
 
 }
 

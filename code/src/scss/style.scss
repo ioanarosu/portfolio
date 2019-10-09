@@ -9,7 +9,10 @@ html {
   height: 100%;
   font-size: 62.5%;
  }  /* =10px */
-
+body {
+  min-height: 100%;
+  background: $body-bg-color;
+}
  p, a {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -17,20 +20,82 @@ html {
   font-family: $body-font;
 }
 main {
-  max-width: 1440px;
   margin: 0 auto;
   background-color: $body-bg-color;
 }
 
 .container {
   display: grid;
-  grid-column-gap: .2rem;
 }
+.btn-ext-link {
+  background-color: $secundary-color;
+  border-radius: 10rem;
+  padding: .8rem 2.4rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: $body-font;
+  line-height: 2;
+  color: #ffffff;
+  flex: 1 0 auto;
+  }
 h2 {
-  font-family: $titles-font;
+    font-family: $titles-font;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    color: $body-color;
+    margin: 0;
+
+}
+.centered {
+  text-align: center;
 }
 .wrap {
-  padding: 0 2rem;
+  padding: 0 3.2rem;
+}
+.contact {
+  background-color: $primary-color;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  h2 {
+    margin-top: 2rem;
+    color: $body-bg-color;
+  }
+//   .contact-section {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     grid-column-gap: 2rem;
+//     grid-row-gap: 1.5rem;
+//     margin-top: 2rem;
+//     &__box {
+//       color: $body-bg-color;
+//       span {
+//         display: block;
+//       }
+//       &--email {
+//         background-color: $body-bg-color;
+//         color: $primary-color;
+//       }
+//     }
+//   }
+//   .email-box-white {
+//     background-color: $body-bg-color;
+//     color: $primary-color;
+//     font-size: 1.4rem;
+//     font-weight: 400;
+//     border-radius: 5px;
+//     padding: 1.5rem;
+//     margin-top: 3rem;
+//     text-transform: uppercase;
+//     span {
+//       display: block;
+//       text-transform: capitalize;
+//       margin-top: .5rem;
+//       font-weight: 600;
+//       font-size: 1.6rem;
+//       text-transform: lowercase;
+//       }
+//   }
 }
 // //////////////////////RESPONSIVE///////////////
 
@@ -38,18 +103,42 @@ h2 {
 and (min-width: 768px)
 and (max-width: 1024px) {
   .container {
-    grid-template-columns: 30rem auto;
+    grid-template-columns: 35rem auto;
+    &--about-me {
+      grid-template-columns: 50% 50%;
+      align-items: center;
+    }
   }
 }
 @media only screen
   and (min-width: 1024px)
   and (max-width: 1440px) {
     .container {
-    grid-template-columns: 30rem auto;
+    grid-template-columns: 40rem auto;
+    &--about-me {
+      grid-template-columns: 50% 50%;
+      align-items: center;
+    }
   }
 }
-
+@media only screen
+  and (min-width: 1440px) {
+    .container {
+    grid-template-columns: 40rem auto;
+    &--about-me {
+      grid-template-columns: 50% 50%;
+      align-items: center;
+    }
+  }
+}
+@import "header";
 @import "left-side";
 @import "right-side";
 @import "footer";
+@import "about";
+@import "case-study";
+
+
+
+
 
