@@ -5,8 +5,6 @@ echo Deploying site to ioanarosu.com
 cd code
 gulp generate
 cd ..
-rm -rf docs
-mkdir docs
 cp -R code/build/* docs
 
 git add -A
