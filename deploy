@@ -7,7 +7,7 @@ gulp generate
 cd ..
 rm -rf docs
 mkdir docs
-cp code/build/* docs
+cp -R code/build/* docs
 
 git add -A
 git commit -m "deploy site"
