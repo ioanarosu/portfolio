@@ -4,8 +4,9 @@ echo Deploying site to ioanarosu.com
 
 cd code
 gulp generate
-cp build/* ../docs/*
 cd ..
+cp code/build docs
+
 git add -A
 git commit -m "deploy site"
-git push 
+git push
