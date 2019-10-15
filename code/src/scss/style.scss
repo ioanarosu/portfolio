@@ -23,7 +23,10 @@ main {
   margin: 0 auto;
   background-color: $body-bg-color;
 }
-
+.ext-link {
+  color: $secundary-color;
+  font-weight: 500;
+}
 .container {
   display: grid;
 }
@@ -33,7 +36,7 @@ main {
   padding: .8rem 2.4rem;
   font-size: 1.4rem;
   font-weight: 500;
-  text-transform: uppercase;
+  text-transform: lowercase;
   font-family: $body-font;
   line-height: 2;
   color: #ffffff;
@@ -53,6 +56,14 @@ h2 {
 .wrap {
   padding: 0 3.2rem;
 }
+.copyr {
+    font-weight: 300;
+    font-size: 1.4rem;
+    text-align: left;
+    color: #3e3e3e;
+    margin-top: 4.8rem;
+    font-family: $titles-font;
+  }
 .contact {
   background-color: $primary-color;
   padding-top: 2rem;
@@ -104,10 +115,7 @@ and (min-width: 768px)
 and (max-width: 1024px) {
   .container {
     grid-template-columns: 35rem auto;
-    &--about-me {
-      grid-template-columns: 50% 50%;
-      align-items: center;
-    }
+
   }
 }
 @media only screen
@@ -115,20 +123,14 @@ and (max-width: 1024px) {
   and (max-width: 1440px) {
     .container {
     grid-template-columns: 40rem auto;
-    &--about-me {
-      grid-template-columns: 50% 50%;
-      align-items: center;
-    }
+
   }
 }
 @media only screen
   and (min-width: 1440px) {
     .container {
     grid-template-columns: 40rem auto;
-    &--about-me {
-      grid-template-columns: 50% 50%;
-      align-items: center;
-    }
+
   }
 }
 @import "header";

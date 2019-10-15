@@ -1,5 +1,7 @@
 .contact {
   background-color: #C42F34; }
+  .contact .copyr {
+    color: #ffffff; }
   .contact h2 {
     color: #ffffff;
     font-weight: 300;
@@ -50,7 +52,7 @@
     text-align: center; }
     .best-projects .projects__box {
       position: relative;
-      margin: 0 auto 2rem auto;
+      margin: 0 auto 3.2rem auto;
       overflow: hidden;
       -webkit-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.05);
       box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.05);
@@ -82,6 +84,14 @@
         line-height: 1.5rem;
         text-transform: uppercase;
         font-weight: 500; }
+      .best-projects .projects__details ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        .best-projects .projects__details ul li {
+          -webkit-box-flex: 1;
+          -ms-flex: 1 0 auto;
+          flex: 1 0 auto; }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .right-side {
@@ -91,44 +101,32 @@
   .best-projects {
     margin-top: 0;
     padding-top: 2rem; }
-    .best-projects h2 {
-      margin-top: 0; }
     .best-projects .projects {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-row-gap: 1.6rem;
-      grid-column-gap: 1.6rem; }
-      .best-projects .projects__box {
-        max-width: 40rem;
-        height: 16rem;
-        margin: 0 auto; } }
+      margin-top: 0; } }
 
 @media only screen and (min-width: 1024px) and (max-width: 1440px) {
   .right-side {
-    grid-column-start: 2; }
+    grid-column-start: 2;
+    margin-bottom: 3.2rem; }
   .contact {
     display: none; }
   .best-projects {
-    padding-top: 2rem;
-    margin-top: 0; }
-    .best-projects h2 {
-      padding-top: 5rem;
-      text-align: left; }
+    margin-top: 2rem; }
     .best-projects .projects {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
       grid-column-gap: 1.6rem;
-      grid-row-gap: 1.6rem; }
+      grid-row-gap: 1.6rem;
+      margin-top: 0; }
       .best-projects .projects__image {
         height: 35rem; }
       .best-projects .projects__box {
-        max-width: 50rem;
-        height: 20rem;
         margin: 0; } }
 
 @media only screen and (min-width: 1440px) {
   .right-side {
-    grid-column-start: 2; }
+    grid-column-start: 2;
+    margin-bottom: 3.2rem; }
     .right-side .contact {
       display: none; }
   .best-projects h2 {
@@ -136,12 +134,11 @@
     text-align: left; }
   .best-projects .projects {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 1.6rem;
-    grid-row-gap: 1.6rem; }
+    grid-row-gap: 1.6rem;
+    margin-top: 2rem; }
     .best-projects .projects__image {
       height: 35rem; }
     .best-projects .projects__box {
-      margin: 0;
-      max-width: 50rem;
-      height: 25rem; } }
+      margin: 0; } }

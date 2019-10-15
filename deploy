@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo Deploying site to ioanarosu.com
+
+cd code
+gulp generate
+cp build/* ../docs/*
+cd ..
+git add -A
+git commit -m "deploy site"
+git push 

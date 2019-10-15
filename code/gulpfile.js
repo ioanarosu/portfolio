@@ -57,3 +57,4 @@ gulp.task('js', function () {
 });
 
 gulp.task('default', gulp.parallel('sass', 'html', 'js', 'webserver', 'images', 'watch'));
+gulp.task('generate', gulp.parallel('sass', 'html', 'js', 'images'));

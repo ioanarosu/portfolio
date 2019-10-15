@@ -1,8 +1,12 @@
 @import "_variables";
 @import "_normalize";
 .about-page {
+  text-align: center;
+  margin: 0 auto;
   header {
     position: fixed;
+    max-width: 144rem;
+    margin: 0 auto;
     z-index: 11;
     top: 0;
     right: 0;
@@ -10,111 +14,81 @@
     left: 0;
     height: 60px;
     background-color:$body-bg-color;
-    box-shadow: 0 0 40px 40px rgba(0,0,0,.05);
+    border-bottom: 1px solid #3e3e3e1a;
 
   }
   .top-bar {
-    max-width: 1440px;
     height: 100%;
     margin: 0 auto;
     background: $body-bg-color;
+    .logo {
+      display: flex;
+      flex: 1 0 10rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      font-size: 2.2rem;
+      text-transform: lowercase;
+      color: $primary-color;
 
+    }
+  }
+  main {
+    margin-top: 6rem;
   }
 }
 .profile-picture {
-  min-height: 25rem;
+  max-width: 60rem;
+  height: 55rem;
+  margin: 4.2rem auto 4.2rem;
   background: url('../images/ioana-rosu.png') no-repeat no-repeat center center;
   background-size: cover;
 }
 .description {
+  max-width: 65rem;
+  margin: 0 auto 4rem auto;
   h2 {
-    padding: 4rem 0;
-    text-align: left;
-    font-size: 4.4rem;
+    padding: 4rem 0 2rem 0;
+    font-size: 6rem;
+    text-transform: capitalize;
   }
-  .underlined {
-    margin-left: 0;
+  h3 {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: $titles-font;
+    text-align: left;
+    margin-top: 4rem;
+
   }
   p {
     line-height: 1.6;
-    font-weight: 300;
+      font-size: 2.2rem;
+      font-weight: 300;
   }
-}
-.contact-me {
-  // background: linear-gradient(to top, #f2f2f2, $body-bg-color);
-  background: $body-bg-color;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.18);
-  margin-top: 3.5rem;
-  padding-top: 2rem;
-  h2 {
-    font-size: 2.4rem;
+  &__infos {
+    text-align: left;
+    p {
+      line-height: 1.6;
+      font-size: 1.8rem;
+      font-weight: 400;
+    }
+  }
+  .experience {
+    text-align: left;
+    font-size: 1.8rem;
     font-family: $titles-font;
     font-weight: 300;
-    margin-bottom: .8rem;
-    margin-top: 1rem;
+    line-height: 1.5;
+    text-transform: capitalize;
+    margin-bottom: 2.4rem;
+    &__time {
+      font-style: italic;
+    }
+    &__company {
+      font-weight: 500;
+      line-height: 1.8;
+    }
+  }
 
 
-  }
-  p {
-    font-size: 1.6rem;
-    line-height: 1.6;
-    font-weight: 300;
-  }
-  .resume-link {
-    color: $secundary-color;
-    font-weight: 700;
-    font-size: 1.6rem;
-  }
-  .mail-link {
-    color: $primary-color;
-    font-size: 1.6rem;
-    font-weight: 400;
-  }
 }
-////////////////////////////RESPONSIVE//////////////////////
-@media only screen
-and (min-width: 768px)
-and (max-width: 1024px) {
-    .profile-picture {
-      max-height: 70rem;
-      height: 70rem;
-    }
-  .contact-me {
-      grid-column-start: 1;
-      grid-column-end: 3;
-      margin-top: 0;
-      padding-top:3.5rem;
-      padding-bottom: 2rem;
-    }
-}
-@media only screen
-  and (min-width: 1024px)
-  and (max-width: 1440px) {
-    .profile-picture {
-      max-height: 70rem;
-      height: 70rem;
-    }
-  .contact-me {
-      grid-column-start: 1;
-      grid-column-end: 3;
-      margin-top: 0;
-      padding-top:3.5rem;
-      padding-bottom: 2rem;
-    }
-
-  }
-
-@media only screen
-  and (min-width: 1440px) {
-    .profile-picture {
-      max-height: 70rem;
-      height: 70rem;
-    }
-    .contact-me {
-        grid-column-start: 1;
-        grid-column-end: 3;
-        margin-top: 0;
-        padding-top:3.5rem;
-        padding-bottom: 2rem;
-    }
-  }
