@@ -2,23 +2,24 @@
   background-color: #212121;
   color: #EEEDF1;
   position: relative;
-  padding: 3rem; }
-  .sm-about h2 {
+  padding: 3rem;
+  margin-top: 6rem; }
+  .sm-about h1 {
     font-family: 'Poppins', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     text-transform: lowercase;
     text-align: center;
     color: #C42F34;
     font-size: 36px;
     letter-spacing: 0;
-    margin-bottom: .6rem; }
+    margin: 0; }
   .sm-about h3 {
     font-family: 'Poppins', sans-serif;
     text-align: center;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: .5rem;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin: 0;
     line-height: 1.5; }
   .sm-about p {
@@ -101,7 +102,8 @@
     text-align: right; }
   .sm-about {
     height: 100%;
-    padding-top: 5rem; }
+    padding-top: 5rem;
+    margin-top: 0; }
     .sm-about p {
       margin-top: 4.2rem; }
     .sm-about h2 {
@@ -127,7 +129,8 @@
     display: grid; }
   .sm-about {
     height: 100%;
-    padding-top: 5rem; }
+    padding-top: 5rem;
+    margin-top: 0; }
     .sm-about h2 {
       font-size: 3.5rem;
       margin-top: 2rem; }

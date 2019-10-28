@@ -406,9 +406,23 @@ ul {
   margin: 0;
   padding: 0; }
 
+header {
+  position: fixed;
+  max-width: 144rem;
+  margin: 0 auto;
+  z-index: 11;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #3e3e3e1a; }
+
 .case-study {
-  padding: 3.2rem;
-  background-color: #fff5f58f; }
+  max-width: 100rem;
+  margin: 8rem auto 0;
+  padding: 3.2rem; }
   .case-study__title {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -416,32 +430,38 @@ ul {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    margin-bottom: 3.2rem; }
+    margin-bottom: 3.2rem;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
     .case-study__title h2 {
       -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
       flex: 1 0 auto;
       line-height: 1.5;
       font-weight: 400;
-      font-size: 3.2rem;
+      font-size: 2.6rem;
       text-align: left; }
   .case-study__picture {
-    margin-bottom: 2.4rem; }
+    margin-bottom: 1.6rem;
+    text-align: center;
+    background-color: #fff5f58f; }
     .case-study__picture img {
-      max-width: 144rem;
       width: 100%; }
   .case-study__infos {
-    margin-bottom: 1.6rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between; }
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: left;
+    -ms-flex-pack: left;
+    justify-content: left; }
     .case-study__infos--resp {
-      -webkit-box-flex: 1;
-      -ms-flex: 1 0 33%;
-      flex: 1 0 33%; }
+      margin-bottom: 1.6rem;
+      padding-right: 2.4rem; }
       .case-study__infos--resp h5 {
         font-family: "Poppins", sans-serif;
         font-size: 1.6rem;
@@ -478,3 +498,21 @@ ul {
     font-size: 2rem;
     font-weight: 400;
     margin-bottom: 1.6rem; }
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .case-study__picture {
+    padding: 2.6rem; } }
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  .case-study {
+    margin-top: 10rem; }
+    .case-study__infos--resp {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 0 33%;
+      flex: 1 0 33%; }
+    .case-study__picture {
+      padding: 4rem; } }
+
+@media only screen and (min-width: 1440px) {
+  .case-study__picture {
+    padding: 4rem; } }
