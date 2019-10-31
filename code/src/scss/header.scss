@@ -9,8 +9,25 @@ header {
   align-items: center;
   justify-content: flex-end;
   .logo {
-    display: none;
-  }
+      display: flex;
+      flex: 1 0 auto;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 2.4rem;
+      text-transform: lowercase;
+      color: $primary-color;
+      span {
+        text-transform: uppercase;
+        color: $body-bg-color;
+        background-color:$body-color;
+        font-size: 1.4rem;
+        font-weight: 400;
+        display: inline-flex;
+        padding: .5rem;
+        margin-left: .5rem;
+      }
+    }
   &__navigation {
     text-align: center;
     li {
@@ -22,7 +39,7 @@ header {
       text-transform: lowercase;
       font-weight: 400;
       font-size: 1.6rem;
-      padding: 1.5rem 1rem;
+      padding: 1.5rem 0 1.5rem 1rem;
       box-shadow: 0px 0px 0px 0px $primary-color inset;
       transition: box-shadow 150ms ease-in-out, color 150ms ease-in-out, -webkit-box-shadow 150ms ease-in-out;
       &:hover {
@@ -42,6 +59,13 @@ and (max-width: 1024px) {
     display: grid;
     grid-column-start: 2;
   }
+  .top-bar {
+    &__navigation {
+    &--link{
+      padding: 1.5rem 1rem;
+    }
+  }
+}
 }
   @media only screen
   and (min-width: 1024px)
@@ -54,9 +78,12 @@ and (max-width: 1024px) {
       &__navigation {
         text-align: right;
 
+      &--link{
+      padding: 1.5rem 1rem;
       }
     }
   }
+}
   @media only screen
 and (min-width: 1440px) {
   header {
@@ -66,7 +93,9 @@ and (min-width: 1440px) {
     .top-bar {
       &__navigation {
         text-align: right;
-
+        &--link{
+      padding: 1.5rem 1rem;
+      }
       }
     }
 }

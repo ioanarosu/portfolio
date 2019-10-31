@@ -17,21 +17,31 @@
     border-bottom: 1px solid #3e3e3e1a;
 
   }
-  .top-bar {
-    height: 100%;
-    margin: 0 auto;
-    background: $body-bg-color;
-    .logo {
-      display: flex;
-      flex: 1 0 10rem;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 400;
-      font-size: 2.2rem;
-      text-transform: lowercase;
-      color: $primary-color;
-
-    }
-  }
+  // .top-bar {
+  //   height: 100%;
+  //   margin: 0 auto;
+  //   background: $body-bg-color;
+  //   .logo {
+  //     display: flex;
+  //     flex: 1 0 10rem;
+  //     align-items: center;
+  //     font-family: 'Poppins', sans-serif;
+  //     font-weight: 600;
+  //     font-size: 2.4rem;
+  //     text-transform: lowercase;
+  //     color: $primary-color;
+  //     span {
+  //       text-transform: uppercase;
+  //       color: $body-bg-color;
+  //       background-color:$body-color;
+  //       font-size: 1.4rem;
+  //       font-weight: 400;
+  //       display: inline-flex;
+  //       padding: .5rem;
+  //       margin-left: .5rem;
+  //     }
+  //   }
+  // }
   main {
     margin-top: 6rem;
   }
