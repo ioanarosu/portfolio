@@ -63,18 +63,24 @@
     margin-top: 7rem;
     text-align: center;
     &__box {
+    	max-width: 32rem;
       position: relative;
       margin: 0 auto 3.2rem auto;
-      overflow: hidden;
       box-shadow: 0 2px 20px 0 rgba(0,0,0,0.05);
       background-color: #ffffff;
-    img {
+    .project__img {
+      overflow: hidden;
       position: relative;
-      display: block;
-      width: 100%;
-      height: auto;
+      height: 25rem;
+      img {
+        position: relative;
+        max-width: 32rem;
+        top:0;
+        left: 0;
+      }
     }
   }
+
   &__details {
     padding: 1.6rem 1.6rem 2.4rem 1.6rem;
 
@@ -88,7 +94,7 @@
       margin-bottom: .8rem;
     }
     h3 {
-      font-size: 2.4rem;
+      font-size: 2rem;
       font-weight: 400;
       font-family: $titles-font;
       text-transform: lowercase;
@@ -110,8 +116,8 @@
     }
   }
 }
-}
 
+}
 // /////////////////////RESPONSIVE}///////////////
 @media only screen
 and (min-width: 768px)
@@ -126,10 +132,21 @@ and (max-width: 1024px) {
     display: none;
   }
   .best-projects {
-    margin-top: 10rem;
+    margin-top: 6rem;
     padding-top: 2rem;
     .projects {
       margin-top: 0;
+      display: grid;
+  		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  		grid-gap: 1.6rem;
+      &__box {
+      	margin: 0 auto 1.6rem;
+	      	// .project__img {
+	      	// 	img {
+	      	// 		max-width: 35rem;
+	      	// 	}
+	      	// }
+      }
     }
   }
 }
@@ -140,7 +157,7 @@ and (max-width: 1440px) {
     grid-column-start: 2;
     margin-bottom: 3.2rem;
     header {
-      left: 40rem;
+      left: 30rem;
     }
 
   }
@@ -148,22 +165,26 @@ and (max-width: 1440px) {
     display: none;
   }
   .best-projects {
-    margin-top: 10rem;
+    margin-top: 8rem;
 
     .projects {
+    	// max-width: 800px;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-column-gap: 1.6rem;
+  		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  		grid-gap: 1.6rem;
       grid-row-gap: 1.6rem;
       margin-top: 0;
-      &__image {
-        height: 35rem;
-      }
+      margin-left: 3.2rem;
+      margin-right: 3.2rem;
+
       &__box {
         margin: 0;
-      }
-      &__details {
-
+       //  max-width: 30rem;
+       //  .project__img {
+      	// 	img {
+      	// 		max-width: 30rem;
+      	// 	}
+      	// }
       }
     }
 
@@ -171,6 +192,9 @@ and (max-width: 1440px) {
 }
 @media only screen
 and (min-width: 1440px) {
+	.sm-about {
+		margin-top: 0;
+	}
   .right-side {
     grid-column-start: 2;
     margin-bottom: 3.2rem;
@@ -183,7 +207,7 @@ and (min-width: 1440px) {
   }
 
   .best-projects {
-    margin-top: 10rem;
+    margin-top: 8rem;
     h2 {
       padding-top: 3rem;
       text-align: left;
@@ -191,13 +215,11 @@ and (min-width: 1440px) {
 
     .projects {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-column-gap: 1.6rem;
-      grid-row-gap: 1.6rem;
+  		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  		grid-gap: 1.6rem;
       margin-top: 2rem;
-      &__image {
-        height: 35rem;
-      }
+      margin-left: 3.2rem;
+      margin-right: 3.2rem;
       &__box {
         margin: 0;
       }
