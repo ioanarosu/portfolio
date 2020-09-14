@@ -5,8 +5,6 @@
   margin: 0 auto;
   header {
     position: fixed;
-    max-width: 144rem;
-    margin: 0 auto;
     z-index: 11;
     top: 0;
     right: 0;
@@ -14,7 +12,6 @@
     left: 0;
     height: 60px;
     background-color:$body-bg-color;
-    border-bottom: 1px solid #3e3e3e1a;
 
   }
   // .top-bar {
