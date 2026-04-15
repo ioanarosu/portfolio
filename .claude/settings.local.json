@@ -6,7 +6,9 @@
       "Bash(npm install *)",
       "Bash(npx gulp *)",
       "Bash(npm show *)",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:ioanarosu.recenza.ro)",
+      "Bash(./deploy *)"
     ]
   }
 }
