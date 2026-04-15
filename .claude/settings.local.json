@@ -8,7 +8,11 @@
       "Bash(npm show *)",
       "WebFetch(domain:github.com)",
       "WebFetch(domain:ioanarosu.recenza.ro)",
-      "Bash(./deploy *)"
+      "Bash(./deploy *)",
+      "Bash(curl -sI https://ioanarosu.recenza.ro)",
+      "Bash(cp -R code/build/* docs/)",
+      "Bash(git add *)",
+      "Bash(git ls-tree *)"
     ]
   }
 }
